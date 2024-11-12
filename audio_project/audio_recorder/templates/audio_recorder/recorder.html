@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Audio Recorder</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <h1>Grabador de Audio</h1>
+    <button id="record">Grabar</button>
+    <button id="pause" disabled>Pausar</button>
+    <button id="stop" disabled>Detener</button>
+    <button id="discard" disabled>Descartar</button>
+    <audio id="audioPlayback" controls></audio>
+
+    <script src="{% static 'js/recorder.js' %}"></script>
+</body>
+</html>
