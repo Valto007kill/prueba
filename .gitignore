@@ -1,0 +1,15 @@
+# ignorar bases de datos de SQLite (si es que se usa)
+.*sqlite3
+
+# ignorar las carpetas de migraciones
+*/migrations/
+
+# Archivos temporales del sistema
+*.pyc
+__pycache__/
+*.log
+
+# Archivos de entorno
+.env
+
+# Archivos de audios generados en la app

@@ -1,20 +1,24 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Audio Recorder</title>
+    <title>Grabador de Sonido</title>
     <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lamejs/1.2.0/lame.min.js"></script>
 </head>
 <body>
-    <h1>Grabador de Audio</h1>
-    <button id="record">Grabar</button>
-    <button id="pause" disabled>Pausar</button>
-    <button id="stop" disabled>Detener</button>
-    <button id="discard" disabled>Descartar</button>
-    <audio id="audioPlayback" controls></audio>
-
+    <div class="container">
+        <h1>Grabador de Sonido</h1>
+        <button id="startBtn">Iniciar Grabación</button>
+        <button id="stopBtn" disabled>Detener Grabación</button>
+        <div id="recordingTime">00:00</div>
+        <audio id="audioPlayback" controls></audio>
+        <a id="downloadLink" href="#" download="grabacion.mp3">Descargar Grabación</a>
+        <button id="saveBtn" disabled>Guardar</button>
+    </div>
     <script src="{% static 'js/recorder.js' %}"></script>
 </body>
 </html>
